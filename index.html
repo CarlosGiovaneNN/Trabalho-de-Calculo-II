@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calc 2</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
     <script src="./scripts/src.js" defer></script>
-</head>
-<body>
-    <header class="header"> 
-        <h1>Trabalho de Calculo II</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Trabalho de Calculo II</h1>
     </header>
-        <div class="input__bar"> 
-            <div>
-                <label class="ltext">Numero de partições...</label>
-                <input type="number" id="input__partition">
-            </div>
-            <div>
-                <label class="ltext">X maximo de intervalo</label>
-                <input type="number" id="input__max">
-            </div>
-        </div>
-        <div>
-            <h2 id="total__area">Area total da função</h2>
-        </div>
-        <div class="graphic">
-            <!-- cod do grafico -->
-        </div>
+    <h3>f(x) = log10(x³)</h3>
+    <div class="input__bar">
+      <div>
+        <label class="ltext">Numero de partições...</label>
+        <input type="number" id="input__partition" placeholder="10" />
+      </div>
+      <div>
+        <label class="ltext">X maximo de intervalo</label>
+        <input type="number" id="input__max" placeholder="10" />
+      </div>
+    </div>
+    <div>
+      <h2 id="total__area">Area total da função</h2>
+      <span id="res"></span>
+    </div>
+    <div class="graphic">
+      <!-- cod do grafico -->
+    </div>
     <footer class="footer">
-        <p>Feito por Julio e Carlos</p>
+      <p>Feito por Julio e Carlos</p>
     </footer>
-</body>
+  </body>
 </html>
