@@ -47,13 +47,40 @@ input:hover {
 
 .header {
   padding: 6rem;
+  display: flex;
+  justify-content: center;
 }
 
 .input__bar {
+  margin: 0 20%;
+  padding: 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .graphic {
 }
 
 .footer {
+}
+
+.function {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+
+.function::before {
+  content: "10";
+  position: absolute;
+  font-size: 8px;
+  bottom: -0.9rem;
+  left: 7.5rem;
 }
