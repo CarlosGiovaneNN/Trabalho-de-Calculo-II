@@ -60,7 +60,7 @@ input:hover {
 
 .header {
   background-color: var(--main-color);
-  padding: 6rem;
+  padding: 0.5rem 6rem;
   display: flex;
   justify-content: center;
 }
@@ -101,7 +101,7 @@ input:hover {
 
 .area {
   padding: 2rem 2rem;
-  margin: 3rem 30rem;
+  margin: 3rem 50rem;
   background-color: var(--forth-color);
   border-radius: 2rem;
   display: flex;
@@ -120,13 +120,19 @@ input:hover {
 
 .graphic {
   padding: 2rem;
-  background-color: var(--third-color);
+  margin: 0 0 4rem 0;
+  background-color: var(--main-color);
 }
 
 .footer {
-  padding-top: 6rem;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
+  background-color: var(--forth-color);
+}
+
+.footer__title {
+  color: var(--main-color);
 }
 
 .function {
@@ -144,5 +150,5 @@ input:hover {
   position: absolute;
   font-size: 8px;
   bottom: -0.9rem;
-  left: 7.5rem;
+  right: 87rem;
 }
