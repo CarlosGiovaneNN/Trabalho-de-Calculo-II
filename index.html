@@ -6,37 +6,46 @@
     <title>Calc 2</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="./scripts/src.js" defer></script>
+    <!-- <script src="./scripts/perspec.js" defer></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
-      <h1>Trabalho de Calculo II</h1>
-    </header>
-    <h3 class="function">f(x) = log (x³)</h3>
-    <div class="input__bar">
-      <div class="box__input">
-        <label class="ltext">Numero de partições</label>
-        <input type="number" id="input__partition" placeholder="10" />
+    <main>
+      <header class="header">
+        <h1>Trabalho de Calculo II</h1>
+      </header>
+      <h3 class="function">f(x) = log (x³)</h3>
+      <div class="input__bar">
+        <div class="box__input">
+          <label class="ltext">Numero de partições</label>
+          <input type="number" id="input__partition" placeholder="10" />
+        </div>
+        <div>
+          <label class="ltext">X maximo de intervalo</label>
+          <input type="number" id="input__max" placeholder="10" />
+        </div>
       </div>
       <div>
-        <label class="ltext">X maximo de intervalo</label>
-        <input type="number" id="input__max" placeholder="10" />
+        <h2 id="total__area">Area total da função</h2>
+        <span id="res"></span>
       </div>
-    </div>
-    <div>
-      <h2 id="total__area">Area total da função</h2>
-      <span id="res"></span>
-    </div>
-    <div class="graphic">
-      <!-- cod do grafico -->
-    </div>
-    <footer class="footer">
-      <p>Feito por Julio e Carlos</p>
-    </footer>
+      <div class="graphic">
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+        </figure>
+      </div>
+      <footer class="footer">
+        <p>Feito por Julio e Carlos</p>
+      </footer>
+    </main>
   </body>
 </html>

@@ -2,8 +2,95 @@ const inputs = document.querySelectorAll("input");
 const min = 1;
 let max = 10;
 let partision = 10;
-
 const resSpan = document.getElementById("res");
+
+const setDataForChart = () => {
+  const toX = max * 2;
+  const points = toX > 8 ? toX : 8;
+
+  const line = Array.from(Array(points).keys()).reduce((acc, i) => {
+    const value = (i * toX) / points;
+    return [
+      ...acc,
+      { x: value, y: value >= 1 ? Math.log10(value ** 3) : null },
+    ];
+  }, []);
+
+  const area = line.filter((i) => i.x <= max);
+
+  const series = [
+    {
+      name: "Area",
+      yAxis: 0,
+      type: "areaspline",
+      fillOpacity: 0.2,
+      color: "#000",
+      data: area
+        .sort((a, b) => a.x - b.x)
+        .map((item) => ({
+          x: item.x,
+          y: item.y,
+        })),
+    },
+    {
+      name: "Function",
+      yAxis: 0,
+      color: "#000",
+      data: line
+        .sort((a, b) => a.x - b.x)
+        .map((item) => ({
+          x: item.x,
+          y: item.y,
+        })),
+    },
+  ];
+
+  Highcharts.chart("container", {
+    title: { text: "" },
+    chart: {
+      type: "spline",
+    },
+    tooltip: {
+      enabled: false,
+      shared: true,
+    },
+    exporting: { enabled: false },
+    legend: { enabled: false },
+    yAxis: [
+      {
+        title: {
+          text: "",
+        },
+      },
+    ],
+    plotOptions: {
+      area: {
+        pointStart: 1940,
+        dataLabels: {
+          enabled: true,
+        },
+        marker: {
+          enabled: false,
+        },
+      },
+      series: {
+        dataLabels: {
+          enabled: false,
+        },
+        enableMouseTracking: false,
+        marker: {
+          enabled: false,
+          states: {
+            hover: {
+              enabled: false,
+            },
+          },
+        },
+      },
+    },
+    series,
+  });
+};
 
 const verifyInputValue = (id, value) => {
   const currentInput = document.getElementById(id);
@@ -27,10 +114,9 @@ const verifyInputValue = (id, value) => {
           currentInput.value = max;
         } else max = value;
       } else max = 10;
-
+      setDataForChart();
       break;
   }
-
   getValues();
 };
 
@@ -81,14 +167,10 @@ const getValues = () => {
 
   const totalArea = rectangles.reduce((acc, i) => acc + i, 0);
 
-  const resObj = {
-    intervals: arr,
-    y,
-    rectangles,
-    totalArea,
-  };
-
   resSpan.innerText = `${totalArea.toFixed(6)} u²`;
 };
 
-document.addEventListener("DOMContentLoaded", getValues);
+document.addEventListener("DOMContentLoaded", () => {
+  getValues();
+  setDataForChart();
+});
