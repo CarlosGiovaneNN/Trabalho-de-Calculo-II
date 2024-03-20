@@ -1,3 +1,10 @@
+:root {
+  --main-color: #112D4E;
+  --second-color: #DBE2EF;
+  --third-color: #3F72AF;
+  --forth-color: #F9F7F7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +18,10 @@ html {
 }
 
 body {
-  padding: 3vh;
-}
-
-body {
+  box-sizing: border-box;
   height: 100vh;
   width: 100vw;
+  background-color: var(--second-color);
 }
 
 main {
@@ -28,8 +33,8 @@ button,
 input,
 textarea {
   font-size: clamp(14px, 1.6rem, 2vw);
-  font-family: "Open Sans", sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
 
 .sr-only {
@@ -45,7 +50,7 @@ textarea {
 }
 
 input {
-  border: 1px solid #000;
+  background-color: var(--forth-color);
 }
 
 input:focus,
@@ -54,9 +59,23 @@ input:hover {
 }
 
 .header {
+  background-color: var(--main-color);
   padding: 6rem;
   display: flex;
   justify-content: center;
+}
+
+.title {
+  color: var(--second-color);
+}
+
+.main__body {
+  padding: 6rem;
+}
+
+.ltext {
+  font-weight: 700;
+  color: var(--forth-color);
 }
 
 .input__bar {
@@ -70,19 +89,54 @@ input:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  background-color: var(--main-color);
+  padding: 4rem;
+  border-radius: 3rem;
+}
+
+.box__number {
+  
+}
+
+.area {
+  padding: 2rem 2rem;
+  margin: 3rem 30rem;
+  background-color: var(--forth-color);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.area__boxtext {
+  color: var(--main-color);
+}
+
+.area__boxinfo {
+
 }
 
 .graphic {
+  padding: 2rem;
+  background-color: var(--third-color);
 }
 
 .footer {
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
 }
 
 .function {
+  display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   margin: 0 0 2rem 0;
+  color: var(--main-color);
+  width: 800;
 }
 
 .function::before {

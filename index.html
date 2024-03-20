@@ -21,31 +21,33 @@
   <body>
     <main>
       <header class="header">
-        <h1>Trabalho de Calculo II</h1>
+        <h1 class="title">Trabalho de Calculo II</h1>
       </header>
-      <h3 class="function">f(x) = log (x³)</h3>
-      <div class="input__bar">
-        <div class="box__input">
-          <label class="ltext">Numero de partições</label>
-          <input type="number" id="input__partition" placeholder="10" />
+      <div class="main__body">
+        <h3 class="function">f(x) = log (x³)</h3>
+        <div class="input__bar">
+          <div class="box__input">
+            <label class="ltext">Numero de partições</label>
+            <input class="box__number" type="number" id="input__partition" placeholder="10" />
+          </div>
+          <div class="box__input">
+            <label class="ltext">X maximo de intervalo</label>
+            <input class="box__number" type="number" id="input__max" placeholder="10" />
+          </div>
         </div>
-        <div>
-          <label class="ltext">X maximo de intervalo</label>
-          <input type="number" id="input__max" placeholder="10" />
+        <div class="area">
+          <h2 class="area__boxtext" id="total__area">Area total da função</h2>
+          <span class="area__boxinfo" id="res"></span>
         </div>
+        <div class="graphic">
+          <figure class="highcharts-figure">
+            <div id="container"></div>
+          </figure>
+        </div>
+        <footer class="footer title">
+          <p>Feito por Julio e Carlos</p>
+        </footer>
       </div>
-      <div>
-        <h2 id="total__area">Area total da função</h2>
-        <span id="res"></span>
-      </div>
-      <div class="graphic">
-        <figure class="highcharts-figure">
-          <div id="container"></div>
-        </figure>
-      </div>
-      <footer class="footer">
-        <p>Feito por Julio e Carlos</p>
-      </footer>
     </main>
   </body>
 </html>
