@@ -141,3 +141,18 @@ input:hover {
   margin: 0 0 2rem 0;
   color: var(--main-color);
 }
+
+@media (max-width: 619px) {
+  .input__bar {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .main__body {
+    padding: 1rem;
+  }
+
+  .highcharts-figure {
+    justify-content: center;
+  }
+}
