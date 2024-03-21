@@ -60,7 +60,7 @@ input:hover {
 
 .header {
   background-color: var(--main-color);
-  padding: 0.5rem 6rem;
+  padding: 2rem 6rem;
   display: flex;
   justify-content: center;
 }
@@ -99,8 +99,8 @@ input:hover {
 }
 
 .area {
-  padding: 2rem 2rem;
-  margin: 3rem;
+  padding: 2rem 0;
+  margin: 3rem 0;
   background-color: var(--forth-color);
   border-radius: 2rem;
   display: flex;
@@ -120,6 +120,16 @@ input:hover {
   padding: 2rem;
   margin: 0 0 4rem 0;
   background-color: var(--main-color);
+  border-radius: 2rem;
+}
+
+.graphic > figure {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.highcharts-credits {
+  display: none;
 }
 
 .footer {

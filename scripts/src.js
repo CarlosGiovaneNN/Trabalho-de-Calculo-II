@@ -24,7 +24,7 @@ const setDataForChart = () => {
       yAxis: 0,
       type: "areaspline",
       fillOpacity: 0.2,
-      color: "#000",
+      color: "#112d4e",
       data: area
         .sort((a, b) => a.x - b.x)
         .map((item) => ({
@@ -35,7 +35,7 @@ const setDataForChart = () => {
     {
       name: "Function",
       yAxis: 0,
-      color: "#000",
+      color: "#112d4e",
       data: line
         .sort((a, b) => a.x - b.x)
         .map((item) => ({
