@@ -1,8 +1,8 @@
 :root {
-  --main-color: #112D4E;
-  --second-color: #DBE2EF;
-  --third-color: #3F72AF;
-  --forth-color: #F9F7F7;
+  --main-color: #112d4e;
+  --second-color: #dbe2ef;
+  --third-color: #3f72af;
+  --forth-color: #f9f7f7;
 }
 
 * {
@@ -19,8 +19,8 @@ html {
 
 body {
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   background-color: var(--second-color);
 }
 
@@ -34,7 +34,7 @@ input,
 textarea {
   font-size: clamp(14px, 1.6rem, 2vw);
   /* font-family: "Open Sans", sans-serif; */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .sr-only {
@@ -96,12 +96,11 @@ input:hover {
 }
 
 .box__number {
-  
 }
 
 .area {
   padding: 2rem 2rem;
-  margin: 3rem 50rem;
+  margin: 3rem;
   background-color: var(--forth-color);
   border-radius: 2rem;
   display: flex;
@@ -115,7 +114,6 @@ input:hover {
 }
 
 .area__boxinfo {
-
 }
 
 .graphic {
@@ -142,13 +140,4 @@ input:hover {
   justify-content: center;
   margin: 0 0 2rem 0;
   color: var(--main-color);
-  width: 800;
-}
-
-.function::before {
-  content: "10";
-  position: absolute;
-  font-size: 8px;
-  bottom: -0.9rem;
-  right: 87rem;
 }
